@@ -68,7 +68,8 @@ def unique_terms(counts: list[Counter[str]], position: int) -> list[tuple[str, i
     return frequent(eligible)[:5]
 
 
-def excerpt(sentence: Sentence, first: int = 0, *, last: int | None = None) -> tuple[float, str]:
+def excerpt(sentence: Sentence, first: int = 0, *, last: int | None = None,
+            cutoff: bool = False) -> tuple[float, str]:
     """Keep hint text bounded without changing sentence or filler counting rules."""
     words = sentence.words
     last = min(last if last is not None else len(words), first + 40)
@@ -78,7 +79,7 @@ def excerpt(sentence: Sentence, first: int = 0, *, last: int | None = None) -> t
     clipped = end - start > 280
     if clipped:
         text = text[:280].rsplit(" ", 1)[0]
-    return words[first].start, ("… " if first else "") + text + (" …" if clipped or last < len(words) or not sentence.end_mark else "")
+    return words[first].start, ("… " if first else "") + text + (" …" if clipped or last < len(words) or not sentence.end_mark or cutoff else "")
 
 
 @dataclass
@@ -87,11 +88,11 @@ class Hints:
     omitted: int = 0
 
     def add(self, sentence: Sentence, limit: int, first: int = 0, *,
-            last: int | None = None, label: str = "") -> None:
+            last: int | None = None, label: str = "", cutoff: bool = False) -> None:
         if len(self.items) >= limit:
             self.omitted += 1
             return
-        hint = excerpt(sentence, first, last=last)
+        hint = excerpt(sentence, first, last=last, cutoff=cutoff)
         self.items.append((*hint, label) if label else hint)
 
 
@@ -110,10 +111,13 @@ def questions(transcript: Transcript, limit: int = 30) -> Hints:
     return result
 
 
-def deferrals(transcript: Transcript, limit: int = 20) -> Hints:
+def deferrals(transcript: Transcript, limit: int = 20, *, range_end: float | None = None) -> Hints:
     entries = [(line, split_words(line)) for line in package_text("deferrals_en.txt").splitlines() if line.strip()]
     result = Hints()
-    for sentence in sentences(transcript.segments):
+    speech = [segment for segment in transcript.segments if segment.text.strip()]
+    at_edge = bool(speech and range_end is not None and abs(speech[-1].end - range_end) <= 0.001)
+    parts = sentences(transcript.segments)
+    for sentence in parts:
         words = [w.text for w in sentence.words]
         for text, entry in entries:
             found = next((i for i in range(len(words) - len(entry) + 1) if words[i:i + len(entry)] == entry), None)
@@ -131,6 +135,8 @@ def deferrals(transcript: Transcript, limit: int = 20) -> Hints:
                 ):
                     continue
                 first = max(0, found - 8) if len(words) > 40 or len(sentence.text) > 280 else 0
-                result.add(sentence, limit, first, label=text)
+                # Recognition may add punctuation even when the selected audio
+                # stops mid-sentence. Mark the terminal hint conservatively.
+                result.add(sentence, limit, first, label=text, cutoff=at_edge and sentence is parts[-1])
                 break
     return result

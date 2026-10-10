@@ -4,7 +4,7 @@
   "quickstart": [
     {
       "file": "README.md",
-      "line": 125,
+      "line": 131,
       "argv": [
         "python",
         "-m",
@@ -15,7 +15,7 @@
     },
     {
       "file": "README.md",
-      "line": 126,
+      "line": 132,
       "argv": [
         "channelrecap",
         "run",
@@ -27,7 +27,7 @@
     },
     {
       "file": "README.md",
-      "line": 127,
+      "line": 133,
       "argv": [
         "channelrecap",
         "check-citations",
@@ -41,7 +41,7 @@
     {
       "role": "tests",
       "file": "README.md",
-      "line": 387,
+      "line": 394,
       "argv": [
         "python",
         "-m",
@@ -64,7 +64,7 @@
         "scripts"
       ],
       "file": "README.md",
-      "line": 388
+      "line": 395
     },
     {
       "role": "lint",
@@ -78,7 +78,7 @@
         "build"
       ],
       "file": "README.md",
-      "line": 386
+      "line": 393
     },
     {
       "role": "lint",
@@ -90,7 +90,7 @@
         "tests"
       ],
       "file": "README.md",
-      "line": 389
+      "line": 396
     },
     {
       "role": "types",
@@ -100,7 +100,7 @@
         "src"
       ],
       "file": "README.md",
-      "line": 390
+      "line": 397
     },
     {
       "role": "build",
@@ -110,7 +110,7 @@
         "build"
       ],
       "file": "README.md",
-      "line": 391
+      "line": 398
     }
   ]
 }

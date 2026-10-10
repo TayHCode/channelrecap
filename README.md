@@ -63,7 +63,11 @@ without administrator access, then let uv supply Python 3.12:
 
 uv installs into `~/.local/bin` by default and may replace an existing uv there.
 Set `UV_INSTALL_DIR` before running the installer to choose another folder, then add
-that folder to your session PATH instead.
+that folder to your session PATH instead. The installer also writes
+`~/.config/uv/uv-receipt.json` by default. To keep both writes in a chosen folder,
+download the installer and run it with `UV_INSTALL_DIR="$PWD/uv-local/bin"`,
+`XDG_CONFIG_HOME="$PWD/uv-local/config"` and `UV_NO_MODIFY_PATH=1` set for the
+installer process; then add `"$PWD/uv-local/bin"` to your session PATH.
 
 ```sh
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -88,7 +92,9 @@ package. On Debian/Ubuntu, an `ensurepip` error means the matching `python3-venv
 missing (for example `python3.13-venv` for Python 3.13). Install it with your system
 package manager if you have administrator access. Without sudo or `python3-venv`,
 use this no-admin uv route instead of the venv commands above. The installer defaults
-to `~/.local/bin`; set `UV_INSTALL_DIR` to choose another folder.
+to `~/.local/bin` and also writes `~/.config/uv/uv-receipt.json`; use
+`UV_INSTALL_DIR` and `XDG_CONFIG_HOME` as described in the macOS install note
+to keep both writes in a chosen folder.
 If `python3 -m venv .venv` already failed, it can leave a partial `.venv`. After confirming
 that `.venv` is only that failed environment, use `uv venv --clear --seed --python 3.12 .venv`
 in place of the `uv venv` line below. `--clear` replaces its contents; preserve any existing
@@ -316,7 +322,7 @@ includes short/silent transcripts retained but excluded from rates and trends. T
 
 | Exit | Meaning |
 |---|---|
-| 0 | Success |
+| 0 | Success; a fully cached `--device cuda` run also exits 0 with a warning that CUDA was not validated, even without a GPU |
 | 1 | A row failed, a citation failed, or no finished transcript was available |
 | 2 | Bad usage, manifest or input; preflight validation processes no rows |
 | 3 | A required tool or optional component is missing or unusable, such as ffmpeg missing |
@@ -353,8 +359,9 @@ No-speech notices are successful processing, with retained transcripts and exclu
 - Captions without punctuation use English question words to suggest possible questions;
   these can miss questions or include ordinary statements. Question and deferral excerpts
   are capped at 40 words and 280 characters, plus omission marks. A trailing ellipsis
-  marks an excerpt cut by that cap or ending without sentence punctuation, including
-  a possible range cutoff; it is not part of the quoted transcript. Sentence-start-only
+  marks an excerpt cut by that cap or ending without sentence punctuation. A terminal
+  promise at the selected range's end also gets an ellipsis for a possible range cutoff,
+  even if recognition added punctuation; it is not part of the quoted transcript. Sentence-start-only
   fillers still rely on punctuation and may be undercounted in automatic captions.
 - Hints and filler timestamps use segment start times, not exact word times. Speech
   recognition can mishear names or invent speech in silence or music despite the voice

@@ -62,7 +62,7 @@ def compose_summary(library: dict[str, Any], items: list[tuple[dict[str, Any], T
         sections.append("### " + heading)
         found_any = False
         for entry, transcript in items:
-            hints = function(transcript)
+            hints = deferrals(transcript, range_end=entry["end"]) if function is deferrals else function(transcript)
             if not hints.items:
                 continue
             found_any = True

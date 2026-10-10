@@ -92,3 +92,26 @@ class RoundThreeTests(unittest.TestCase):
         self.assertEqual(hint[1], text + ' …')
         complete = 'The milk steaming tutorial is coming soon.'
         self.assertEqual(deferrals(Transcript(segments=[Segment(0, 5, complete)])).items[0][1], complete)
+
+    def test_range_edge_promise_marks_possible_cutoff_despite_model_punctuation(self):
+        text = 'The milk steaming tutorial is coming soon, and I.'
+        transcript = Transcript(duration=5, offset=10, segments=[Segment(10, 15, text)])
+        entry = dict(video_id='range-demo', title='Invented', date='', start=10, end=15,
+                     duration=5, words=10, transcript='transcripts/range-demo.txt')
+        self.assertIn(f'"{text} …"', compose_summary({'videos': []}, [(entry, transcript)]))
+        for end in (None, 14, 20):
+            entry['end'] = end
+            summary = compose_summary({'videos': []}, [(entry, transcript)])
+            self.assertIn(f'"{text}"', summary)
+            self.assertNotIn(f'"{text} …"', summary)
+
+    def test_range_edge_marks_only_terminal_promise_sentence(self):
+        first = 'I will explain the grinder next week.'
+        last = 'I will also compare milk steaming, and I'
+        transcript = Transcript(duration=5, segments=[Segment(0, 5, first + ' ' + last)])
+        entry = dict(video_id='range-demo', title='Invented', date='', start=0, end=5,
+                     duration=5, words=20, transcript='transcripts/range-demo.txt')
+        summary = compose_summary({'videos': []}, [(entry, transcript)])
+        self.assertIn(f'"{first}"', summary)
+        self.assertIn(f'"{last} …"', summary)
+        self.assertNotIn(f'"{last} … …"', summary)

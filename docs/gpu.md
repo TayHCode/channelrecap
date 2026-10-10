@@ -49,7 +49,8 @@ large-v3, which needs a separate model download and more GPU memory.
 CPU uses `int8`; CUDA uses `float16`. `--compute-type` overrides the choice. An
 explicit CUDA request that cannot initialize exits 3 when processing media. Reused
 cached media rows load no model and print a warning that CUDA was not validated;
-a fully cached run can exit 0 even on a machine without a GPU. Use `doctor --device cuda`
+a fully cached `--device cuda` run exits 0 with that warning even on a machine without a GPU,
+as listed in the README exit-code table. Use `doctor --device cuda`
 and a fresh media output folder or `--force` to check actual GPU transcription. `--device auto` selects CUDA
 when available, reports the choice, and falls back to CPU if CUDA initialization fails.
 `doctor` checks devices and decodes generated PCM without loading a speech model;
