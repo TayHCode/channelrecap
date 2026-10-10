@@ -1,0 +1,24 @@
+video_id,date,title,words,filler,ambiguous,sentence_start_only,count,per_1000_words
+pour-over-basics-6916124b,2026-01-10,Pour-over basics,397,TOTAL_CLEAR,,,4,10.1
+pour-over-basics-6916124b,2026-01-10,Pour-over basics,397,TOTAL_ALL,,,7,17.6
+pour-over-basics-6916124b,2026-01-10,Pour-over basics,397,actually,yes,no,1,2.5
+pour-over-basics-6916124b,2026-01-10,Pour-over basics,397,and so,no,no,1,2.5
+pour-over-basics-6916124b,2026-01-10,Pour-over basics,397,like,yes,no,1,2.5
+pour-over-basics-6916124b,2026-01-10,Pour-over basics,397,so,yes,yes,1,2.5
+pour-over-basics-6916124b,2026-01-10,Pour-over basics,397,um,no,no,1,2.5
+pour-over-basics-6916124b,2026-01-10,Pour-over basics,397,you know,no,no,1,2.5
+pour-over-basics-6916124b,2026-01-10,Pour-over basics,397,you know what i mean,no,no,1,2.5
+choosing-a-grinder-cb62506b,2026-02-14,Choosing a grinder,408,TOTAL_CLEAR,,,3,7.4
+choosing-a-grinder-cb62506b,2026-02-14,Choosing a grinder,408,TOTAL_ALL,,,5,12.3
+choosing-a-grinder-cb62506b,2026-02-14,Choosing a grinder,408,and so,no,no,1,2.5
+choosing-a-grinder-cb62506b,2026-02-14,Choosing a grinder,408,like,yes,no,1,2.5
+choosing-a-grinder-cb62506b,2026-02-14,Choosing a grinder,408,so,yes,yes,1,2.5
+choosing-a-grinder-cb62506b,2026-02-14,Choosing a grinder,408,um,no,no,1,2.5
+choosing-a-grinder-cb62506b,2026-02-14,Choosing a grinder,408,you know,no,no,1,2.5
+water-and-milk-2af6b989,2026-03-21,Water and milk,426,TOTAL_CLEAR,,,3,7.0
+water-and-milk-2af6b989,2026-03-21,Water and milk,426,TOTAL_ALL,,,5,11.7
+water-and-milk-2af6b989,2026-03-21,Water and milk,426,and so,no,no,1,2.3
+water-and-milk-2af6b989,2026-03-21,Water and milk,426,like,yes,no,1,2.3
+water-and-milk-2af6b989,2026-03-21,Water and milk,426,so,yes,yes,1,2.3
+water-and-milk-2af6b989,2026-03-21,Water and milk,426,um,no,no,1,2.3
+water-and-milk-2af6b989,2026-03-21,Water and milk,426,you know,no,no,1,2.3

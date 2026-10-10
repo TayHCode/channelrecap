@@ -1,0 +1,116 @@
+{
+  "exclude": [],
+  "approvals": [],
+  "quickstart": [
+    {
+      "file": "README.md",
+      "line": 125,
+      "argv": [
+        "python",
+        "-m",
+        "pip",
+        "install",
+        "."
+      ]
+    },
+    {
+      "file": "README.md",
+      "line": 126,
+      "argv": [
+        "channelrecap",
+        "run",
+        "--manifest",
+        "examples/demo/videos.csv",
+        "--out",
+        "demo-library"
+      ]
+    },
+    {
+      "file": "README.md",
+      "line": 127,
+      "argv": [
+        "channelrecap",
+        "check-citations",
+        "examples/demo/analysis-example.md",
+        "--out",
+        "demo-library"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "role": "tests",
+      "file": "README.md",
+      "line": 387,
+      "argv": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-q"
+      ]
+    },
+    {
+      "role": "syntax",
+      "argv": [
+        "python",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "file": "README.md",
+      "line": 388
+    },
+    {
+      "role": "lint",
+      "argv": [
+        "python",
+        "-m",
+        "pip",
+        "install",
+        "ruff",
+        "mypy",
+        "build"
+      ],
+      "file": "README.md",
+      "line": 386
+    },
+    {
+      "role": "lint",
+      "argv": [
+        "ruff",
+        "check",
+        "src",
+        "scripts",
+        "tests"
+      ],
+      "file": "README.md",
+      "line": 389
+    },
+    {
+      "role": "types",
+      "argv": [
+        "mypy",
+        "--ignore-missing-imports",
+        "src"
+      ],
+      "file": "README.md",
+      "line": 390
+    },
+    {
+      "role": "build",
+      "argv": [
+        "python",
+        "-m",
+        "build"
+      ],
+      "file": "README.md",
+      "line": 391
+    }
+  ]
+}

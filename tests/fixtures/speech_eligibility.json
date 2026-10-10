@@ -1,0 +1,7 @@
+[
+  {"label": "first", "words": 1000, "fillers": 35},
+  {"label": "second", "words": 1000, "fillers": 26},
+  {"label": "third", "words": 1000, "fillers": 27},
+  {"label": "silent", "words": 0, "fillers": 0},
+  {"label": "short", "words": 19, "fillers": 1}
+]

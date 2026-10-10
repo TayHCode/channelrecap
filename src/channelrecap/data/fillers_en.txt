@@ -1,0 +1,48 @@
+# Hesitation sounds
+um
+umm
+uh
+uhh
+uhm
+er
+erm
+ah
+hmm
+mm
+
+# Filler phrases
+you know
+you know what i mean
+i mean
+kind of
+kinda
+sort of
+sorta
+and so
+so yeah
+or something
+or whatever
+and stuff
+and everything
+i guess
+if that makes sense
+does that make sense
+at the end of the day
+to be honest
+
+# Often normal words: counted only under "all candidates"
+~like
+~basically
+~actually
+~literally
+~honestly
+~obviously
+~essentially
+~anyway
+~anyways
+~just
+~really
+~right
+~okay
+~^so
+~^well

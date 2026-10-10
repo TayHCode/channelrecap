@@ -1,0 +1,578 @@
+[
+  {
+    "audit": 2,
+    "name": "trailing-period",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"this sentence was never said by anyone at all\" [alpha-aaaaaaaa @ 00:00:00].\n"
+  },
+  {
+    "audit": 2,
+    "name": "MM-SS",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"this sentence was never said by anyone at all\" [alpha-aaaaaaaa @ 01:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "missing-blockquote",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n\"this sentence was never said by anyone at all\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "bullet-blockquote",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n- > \"this sentence was never said by anyone at all\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "italic-quote",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> *\"this sentence was never said by anyone at all\"* [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "parentheses",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"this sentence was never said by anyone at all\" (alpha-aaaaaaaa @ 00:00:00)\n"
+  },
+  {
+    "audit": 2,
+    "name": "single-quotes",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> 'this sentence was never said by anyone at all' [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "backtick-id",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"this sentence was never said by anyone at all\" [`alpha-aaaaaaaa` @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "fractional-time",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"this sentence was never said by anyone at all\" [alpha-aaaaaaaa @ 00:00:00.5]\n"
+  },
+  {
+    "audit": 2,
+    "name": "trailing-text",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"this sentence was never said by anyone at all\" [alpha-aaaaaaaa @ 00:00:00] (see above)\n"
+  },
+  {
+    "audit": 2,
+    "name": "two-on-one-line",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"this sentence was never said by anyone at all\" [alpha-aaaaaaaa @ 00:00:00] > \"this sentence was never said by anyone at all\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "unicode-all-markers",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n＞ ＂this sentence was never said by anyone at all＂ ［alpha-aaaaaaaa ＠ 00:00:00］\n"
+  },
+  {
+    "audit": 2,
+    "name": "unicode-time-digits",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"this sentence was never said by anyone at all\" [alpha-aaaaaaaa @ ００:００:００]\n"
+  },
+  {
+    "audit": 2,
+    "name": "trailing-spaces-fabrication",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"this sentence was never said by anyone at all\" [alpha-aaaaaaaa @ 00:00:00]   \t\n"
+  },
+  {
+    "audit": 2,
+    "name": "wrong-time-format",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"this sentence was never said by anyone at all\" [alpha-aaaaaaaa @ 00:0:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "disjoint-two-cues",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Amber lanterns shine wooden boats downstream\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "different-video",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Mellow drums echo across empty courtyards\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "correct-text-wrong-time",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:01]\n"
+  },
+  {
+    "audit": 2,
+    "name": "empty-quote",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "duplicate-on-one-line",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00] > \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "markdown-escaping",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n\\> \\\"this sentence was never said by anyone at all\\\" \\[alpha-aaaaaaaa @ 00:00:00\\]\n"
+  },
+  {
+    "audit": 2,
+    "name": "valid",
+    "legacy_expected": 0,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "valid-trailing-spaces",
+    "legacy_expected": 0,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]  \t\n"
+  },
+  {
+    "audit": 2,
+    "name": "valid-two-cues",
+    "legacy_expected": 0,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"quiet valleys Bright rivers carry wooden boats\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "valid-two-paragraphs",
+    "legacy_expected": 0,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"wooden boats downstream Gentle clouds drift across\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "duplicate-valid-lines",
+    "legacy_expected": 0,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "valid-curly-quotes",
+    "legacy_expected": 0,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> “Amber lanterns shine above quiet valleys” — [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "valid-case-punctuation",
+    "legacy_expected": 0,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"AMBER LANTERNS SHINE ABOVE QUIET VALLEYS!!!\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "synonym",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Amber lanterns glow above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "word-order",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Amber shine lanterns above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "dropped-word",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Amber lanterns shine above valleys\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "ellipsis-join",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Amber lanterns ... wooden boats downstream\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "partial-words",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"ber lanterns shine above quiet valle\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "far-future",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Gentle clouds drift across distant hills\" [alpha-aaaaaaaa @ 999:59:59]\n"
+  },
+  {
+    "audit": 2,
+    "name": "known-id-bad-time",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:75:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "unknown-video",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Amber lanterns shine above quiet valleys\" [missing-id @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "no-citations",
+    "legacy_expected": 1,
+    "report": "ordinary prose without citations\n"
+  },
+  {
+    "audit": 2,
+    "name": "four-words",
+    "legacy_expected": 0,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Amber lanterns shine above\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "three-words",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Amber lanterns shine\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "markdown-valid-quote",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \\\"Amber lanterns shine above quiet valleys\\\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 2,
+    "name": "ordinary-prose-email",
+    "legacy_expected": 0,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nFor contact use CONTACT_ADDRESS.\n"
+  },
+  {
+    "audit": 2,
+    "name": "ordinary-prose-at",
+    "legacy_expected": 0,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nNotes for the @editor are below.\n"
+  },
+  {
+    "audit": 2,
+    "name": "unicode-zero-width-prefix",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n​＞ ＂this sentence was never said by anyone at all＂ ［alpha-aaaaaaaa ＠ 00:00:00］\n"
+  },
+  {
+    "audit": 2,
+    "name": "unicode-bullet-bold",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n- **“this sentence was never said by anyone at all”** ［alpha-aaaaaaaa ＠ 00:00:00］\n"
+  },
+  {
+    "audit": 2,
+    "name": "known-id-comma",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: \"this sentence was never said by anyone at all\" [alpha-aaaaaaaa, 00:00:00].\n"
+  },
+  {
+    "audit": 2,
+    "name": "known-id-colon",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: \"this sentence was never said by anyone at all\" [alpha-aaaaaaaa: 00:00:00].\n"
+  },
+  {
+    "audit": 2,
+    "name": "known-id-parenthesis-comma",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: \"this sentence was never said by anyone at all\" (alpha-aaaaaaaa, 00:00:00).\n"
+  },
+  {
+    "audit": 2,
+    "name": "table-citation",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n| \"this sentence was never said by anyone at all\" | alpha-aaaaaaaa | 00:00:00 |\n"
+  },
+  {
+    "audit": 2,
+    "name": "html-blockquote",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n<blockquote>\"this sentence was never said by anyone at all\" [alpha-aaaaaaaa, 00:00:00]</blockquote>\n"
+  },
+  {
+    "audit": 3,
+    "name": "brackets-semicolon",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: \"Invented otters play silver trumpets tonight\" [alpha-aaaaaaaa; 00:00:00]\n"
+  },
+  {
+    "audit": 3,
+    "name": "brackets-slash",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: \"Invented otters play silver trumpets tonight\" [alpha-aaaaaaaa / 00:00:00]\n"
+  },
+  {
+    "audit": 3,
+    "name": "braces-dash",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: \"Invented otters play silver trumpets tonight\" {alpha-aaaaaaaa - 00:00:00}\n"
+  },
+  {
+    "audit": 3,
+    "name": "parentheses-no-clock",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: \"Invented otters play silver trumpets tonight\" (alpha-aaaaaaaa)\n"
+  },
+  {
+    "audit": 3,
+    "name": "numeric-footnote",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: Invented otters play silver trumpets tonight [2]\n"
+  },
+  {
+    "audit": 3,
+    "name": "caret-footnote",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: Invented otters play silver trumpets tonight [^note]\n"
+  },
+  {
+    "audit": 3,
+    "name": "superscript-footnote",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: Invented otters play silver trumpets tonight²\n² alpha-aaaaaaaa, 00:00:00\n"
+  },
+  {
+    "audit": 3,
+    "name": "html-footnote",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: Invented otters play silver trumpets tonight<sup>2</sup>\n<sup>2</sup> alpha-aaaaaaaa, 00:00:00\n"
+  },
+  {
+    "audit": 3,
+    "name": "markdown-link",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: [Invented otters play silver trumpets tonight](transcripts/alpha-aaaaaaaa.txt#00:00:00)\n"
+  },
+  {
+    "audit": 3,
+    "name": "markdown-reference-link",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: [Invented otters play silver trumpets tonight][evidence]\n[evidence]: transcripts/alpha-aaaaaaaa.txt\n"
+  },
+  {
+    "audit": 3,
+    "name": "markdown-inline-destination",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: [Invented otters play silver trumpets tonight](transcripts/alpha-aaaaaaaa.txt)\n"
+  },
+  {
+    "audit": 3,
+    "name": "markdown-reference-link-prefix",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: [Invented otters play silver trumpets tonight][source]\n[source]: ./alpha-aaaaaaaa.txt\n"
+  },
+  {
+    "audit": 3,
+    "name": "table-no-clock",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n| Invented otters play silver trumpets tonight | alpha-aaaaaaaa |\n"
+  },
+  {
+    "audit": 3,
+    "name": "table-uppercase-id",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n| Invented otters play silver trumpets tonight | ALPHA-AAAAAAAA |\n"
+  },
+  {
+    "audit": 3,
+    "name": "table-unknown-id",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n| Invented otters play silver trumpets tonight | missing-video-01234567 |\n"
+  },
+  {
+    "audit": 3,
+    "name": "code-fence",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n```text\n> \"Invented otters play silver trumpets tonight\" [alpha-aaaaaaaa @ 00:00:00]\n```\n"
+  },
+  {
+    "audit": 3,
+    "name": "inline-code",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nExample: `> \"Invented otters play silver trumpets tonight\" [alpha-aaaaaaaa @ 00:00:00]`\n"
+  },
+  {
+    "audit": 3,
+    "name": "nested-double-quotes",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"They said \"invented otters\" play silver trumpets\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 3,
+    "name": "nested-single-quotes",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"They said 'invented otters' play silver trumpets\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 3,
+    "name": "fabricated-contraction",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"We don't need a silver trumpet tonight\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 3,
+    "name": "fabricated-possessive",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"The lantern's keeper plays silver trumpets\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 3,
+    "name": "fullwidth-known-id",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: «Invented otters play silver trumpets tonight» ａｌｐｈａ－ａａａａａａａａ\n"
+  },
+  {
+    "audit": 3,
+    "name": "zero-width-known-id",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: \"Invented otters play silver trumpets tonight\" alpha‍-c610d3b9\n"
+  },
+  {
+    "audit": 3,
+    "name": "word-joiners-everywhere",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n>⁠ ⁠\"⁠I⁠n⁠v⁠e⁠n⁠t⁠e⁠d⁠ ⁠o⁠t⁠t⁠e⁠r⁠s⁠ ⁠p⁠l⁠a⁠y⁠ ⁠s⁠i⁠l⁠v⁠e⁠r⁠ ⁠t⁠r⁠u⁠m⁠p⁠e⁠t⁠s⁠ ⁠t⁠o⁠n⁠i⁠g⁠h⁠t⁠\"⁠ ⁠[⁠a⁠l⁠p⁠h⁠a⁠-⁠c⁠6⁠1⁠0⁠d⁠3⁠b⁠9⁠ ⁠@⁠ ⁠0⁠0⁠:⁠0⁠0⁠:⁠0⁠0⁠]\n"
+  },
+  {
+    "audit": 3,
+    "name": "bare-id-double-quote",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: \"Invented otters play silver trumpets tonight\" alpha-aaaaaaaa\n"
+  },
+  {
+    "audit": 3,
+    "name": "bare-id-single-quote",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: 'Invented otters play silver trumpets tonight' alpha-aaaaaaaa\n"
+  },
+  {
+    "audit": 3,
+    "name": "bare-id-guillemets",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: «Invented otters play silver trumpets tonight» alpha-aaaaaaaa\n"
+  },
+  {
+    "audit": 3,
+    "name": "bare-id-single-guillemets",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: ‹Invented otters play silver trumpets tonight› alpha-aaaaaaaa\n"
+  },
+  {
+    "audit": 3,
+    "name": "bare-id-corner-quotes",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: 「Invented otters play silver trumpets tonight」 alpha-aaaaaaaa\n"
+  },
+  {
+    "audit": 3,
+    "name": "bare-id-unknown",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: \"Invented otters play silver trumpets tonight\" missing-video-01234567\n"
+  },
+  {
+    "audit": 3,
+    "name": "split-quote-bracket",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Invented otters play silver trumpets tonight\"\n[alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 3,
+    "name": "split-all-reference-components",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: \"Invented otters play silver trumpets tonight\"\nalpha-aaaaaaaa\n00:00:00\n"
+  },
+  {
+    "audit": 3,
+    "name": "split-markdown-link",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: [Invented otters play silver trumpets tonight]\n(transcripts/alpha-aaaaaaaa.txt)\n"
+  },
+  {
+    "audit": 3,
+    "name": "wrong-separator-at-word",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: \"Invented otters play silver trumpets tonight\" alpha-aaaaaaaa at 00-00-00\n"
+  },
+  {
+    "audit": 3,
+    "name": "unicode-ratio-clock",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: «Invented otters play silver trumpets tonight» alpha-aaaaaaaa @ 00∶00∶00\n"
+  },
+  {
+    "audit": 3,
+    "name": "unicode-modifier-clock",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: «Invented otters play silver trumpets tonight» alpha-aaaaaaaa @ 00꞉00꞉00\n"
+  },
+  {
+    "audit": 3,
+    "name": "id-upper-canonical",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Invented otters play silver trumpets tonight\" [ALPHA-AAAAAAAA @ 00:00:00]\n"
+  },
+  {
+    "audit": 3,
+    "name": "reserved-source-upper",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: Invented otters play silver trumpets tonight [SOURCE: ALPHA-AAAAAAAA]\n"
+  },
+  {
+    "audit": 3,
+    "name": "html-entities",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: &quot;Invented otters play silver trumpets tonight&quot; &#91;alpha-aaaaaaaa&#64;00:00:00&#93;\n"
+  },
+  {
+    "audit": 3,
+    "name": "omitted-close",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: Invented otters play silver trumpets tonight [alpha-aaaaaaaa\n"
+  },
+  {
+    "audit": 3,
+    "name": "unicode-thin-spaces",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Invented otters play silver trumpets tonight\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 3,
+    "name": "zero-width-bracket",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: Invented otters play silver trumpets tonight [​alpha-aaaaaaaa​]\n"
+  },
+  {
+    "audit": 3,
+    "name": "wrong-timestamp-seconds",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:60]\n"
+  },
+  {
+    "audit": 3,
+    "name": "clock-uppercase-id-bare",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\nObservation: Invented otters play silver trumpets tonight; ALPHA-AAAAAAAA, 00:00:00\n"
+  },
+  {
+    "audit": 3,
+    "name": "new-paraphrase-substitution",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Amber lanterns illuminate the quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 3,
+    "name": "new-paraphrase-negation",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Amber lanterns never shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  },
+  {
+    "audit": 3,
+    "name": "new-paraphrase-order",
+    "legacy_expected": 1,
+    "report": "> \"Amber lanterns shine above quiet valleys\" [alpha-aaaaaaaa @ 00:00:00]\n> \"Quiet valleys shine above amber lanterns\" [alpha-aaaaaaaa @ 00:00:00]\n"
+  }
+]
