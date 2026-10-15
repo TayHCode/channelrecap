@@ -218,7 +218,7 @@ class CliTests(unittest.TestCase):
         speech = (self.out / library['videos'][1]['transcript']).read_text(encoding='utf-8')
         self.assertIn('Source: talk.vtt', speech)
         self.assertNotIn(str(self.root), speech)
-
+        # Preparing an older library also removes paths from its stored error text.
         library['videos'][0]['error'] = f'Cannot decode "{source}"'
         atomic_json(self.out / 'library.json', library)
         self.assertEqual(self.call('prepare', '--out', str(self.out))[0], 0)

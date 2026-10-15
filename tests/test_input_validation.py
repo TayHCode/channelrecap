@@ -234,7 +234,7 @@ class InputValidationTests(unittest.TestCase):
         self.assertEqual(self.snapshot(), damaged)
 
     def test_home_relative_sources_do_not_leak_in_shared_files(self):
-
+        # User-home lookup is mocked rather than changing the process HOME.
         nested = self.root / 'room' / 'sub' / 'talk.vtt'
         nested.parent.mkdir(parents=True)
         nested.write_text(self.source.read_text(encoding='utf-8'), encoding='utf-8')
