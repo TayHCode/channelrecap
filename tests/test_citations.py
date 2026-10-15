@@ -105,7 +105,7 @@ class CitationTests(unittest.TestCase):
         for case in cases:
             raw = case['report'].replace('CONTACT_ADDRESS', 'editor' + '@' + 'example.com')
             with self.subTest(audit=case['audit'], name=case['name']):
-                # All legacy reports need explicit migration, including old controls.
+
                 self.assertEqual(self.call(raw)[0], 1)
                 # Replay the unchanged attempt INSIDE a valid findings block beside
                 # good evidence, so failure cannot rely on a missing report envelope.

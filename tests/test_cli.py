@@ -218,7 +218,7 @@ class CliTests(unittest.TestCase):
         speech = (self.out / library['videos'][1]['transcript']).read_text(encoding='utf-8')
         self.assertIn('Source: talk.vtt', speech)
         self.assertNotIn(str(self.root), speech)
-        # Preparing an older library also removes paths from its stored error text.
+
         library['videos'][0]['error'] = f'Cannot decode "{source}"'
         atomic_json(self.out / 'library.json', library)
         self.assertEqual(self.call('prepare', '--out', str(self.out))[0], 0)
@@ -278,7 +278,7 @@ class CliTests(unittest.TestCase):
         self.assertEqual(len((self.out / 'fillers.csv').read_text(encoding='utf-8').splitlines()), 1)
         self.assertEqual({p: p.read_bytes() for p in preserved}, preserved)
         self.assertEqual(pointer.read_text(encoding='utf-8'), 'User notes to preserve.\n')
-        # Explicit preparation and filler reporting must not revive old results.
+
         self.assertEqual(self.call('prepare', '--out', str(self.out))[0], 1)
         (self.out / 'fillers.csv').write_bytes(old_csv)
         self.assertEqual(self.call('fillers', '--out', str(self.out))[0], 1)

@@ -87,7 +87,7 @@ class InputValidationTests(unittest.TestCase):
             fresh = self.root / 'unused'
             self.assertEqual(self.call('transcribe', self.source, '--out', fresh)[0], 2)
             self.assertFalse(fresh.exists())
-        # A later invalid caption also prevents mutation of an earlier valid row.
+
         self.source.write_text(text, encoding='utf-8')
         other = self.root / 'other.vtt'
         other.write_bytes(text.encode() + b'\xff')
@@ -234,7 +234,7 @@ class InputValidationTests(unittest.TestCase):
         self.assertEqual(self.snapshot(), damaged)
 
     def test_home_relative_sources_do_not_leak_in_shared_files(self):
-        # User-home lookup is mocked rather than changing the process HOME.
+
         nested = self.root / 'room' / 'sub' / 'talk.vtt'
         nested.parent.mkdir(parents=True)
         nested.write_text(self.source.read_text(encoding='utf-8'), encoding='utf-8')

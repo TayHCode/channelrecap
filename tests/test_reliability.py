@@ -70,7 +70,7 @@ class ReliabilityTests(unittest.TestCase):
             self.assertFalse(e['trend_usable'])
             self.assertEqual(e['status'], 'done')
             self.assertTrue((out / e['transcript']).is_file())
-            # An older index without flags is safely upgraded by prepare.
+
             path = out / 'library.json'
             index = json.loads(path.read_text())
             for field in ('speech_status', 'trend_usable', 'notice'):
